@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication - API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<h1>Welcome to the Authentication API</h1>
+
+
+<button onclick="test()">Test Backend</button>
+<button onclick="test()">Test Backend</button>
+
+<script>
+async function test() {
+  try {
+    const res = await fetch("http://127.0.0.1:8000/");
+    const data = await res.json();
+    console.log("SUCCESS:", data);
+    alert("Check console");
+  } catch (err) {
+    console.log("ERROR:", err);
+  }
+}
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
